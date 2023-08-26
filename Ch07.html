@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Python for Non-Programmers - 7&nbsp; Conditional Expressions</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Ch08.html" rel="next">
+<link href="./Ch06.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Ch07.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conditional Expressions</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Python for Non-Programmers</a> 
+        <div class="sidebar-tools-main">
+    <a href="./Python-for-Non-Programmers.pdf" rel="" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Modules, PIP and Comments</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Variables and Data Types</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Strings</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lists and Tuples</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Python Dictionaries and Sets</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch07.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conditional Expressions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Loops</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">List Comprehensions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Functions and Recursion</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#if-else-statement-syntax" id="toc-if-else-statement-syntax" class="nav-link active" data-scroll-target="#if-else-statement-syntax"><span class="header-section-number">7.1</span> If else Statement Syntax</a></li>
+  <li><a href="#indentation" id="toc-indentation" class="nav-link" data-scroll-target="#indentation"><span class="header-section-number">7.2</span> Indentation</a></li>
+  <li><a href="#if-elif-and-else-statement" id="toc-if-elif-and-else-statement" class="nav-link" data-scroll-target="#if-elif-and-else-statement"><span class="header-section-number">7.3</span> If elif and else Statement</a>
+  <ul class="collapse">
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">7.3.1</span> Example</a></li>
+  </ul></li>
+  <li><a href="#nested-if-statements" id="toc-nested-if-statements" class="nav-link" data-scroll-target="#nested-if-statements"><span class="header-section-number">7.4</span> Nested if statements</a>
+  <ul class="collapse">
+  <li><a href="#note" id="toc-note" class="nav-link" data-scroll-target="#note"><span class="header-section-number">7.4.1</span> Note:</a></li>
+  </ul></li>
+  <li><a href="#multiple-if-conditions" id="toc-multiple-if-conditions" class="nav-link" data-scroll-target="#multiple-if-conditions"><span class="header-section-number">7.5</span> Multiple If Conditions</a>
+  <ul class="collapse">
+  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1"><span class="header-section-number">7.5.1</span> Example</a></li>
+  </ul></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise"><span class="header-section-number">7.6</span> Exercise</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conditional Expressions</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Decision making is required when we want to execute a code only if a certain condition is satisfied. The if…elif…else statement is used in Python for decision making. If-else conditional statement is used in when a situation leads to <strong>two conditions</strong> and <strong>one of them should hold true</strong>.</p>
+<section id="if-else-statement-syntax" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="if-else-statement-syntax"><span class="header-section-number">7.1</span> If else Statement Syntax</h2>
+<div class="cell" data-execution_count="1">
+<div class="cell-output cell-output-stdout">
+<pre><code>x is 1</code></pre>
+</div>
+</div>
+<p>Here, the program evaluates the <code>test expression</code> and will execute statement(s) only if the test expression is <code>True</code>. If the test expression is <code>False</code>, the statement(s) is not executed.</p>
+<p>In Python, the body of the <code>if</code> statement is indicated by the <strong>indentation</strong>. The body starts with an indentation and the first unindented line marks the end.</p>
+<p>Remember: Python interprets non-zero values as <code>True</code>. <code>None</code> and <code>0</code> are interpreted as <code>False</code>.</p>
+<div id="fig-ifelse" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/Python_if_else_statement.webp" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">if_else</figcaption>
+</figure>
+</div>
+<figcaption class="figure-caption">Figure&nbsp;7.1: <strong>?(caption)</strong></figcaption>
+</figure>
+</div>
+</section>
+<section id="indentation" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="indentation"><span class="header-section-number">7.2</span> Indentation</h2>
+<p>Python uses <strong>indentation</strong> for blocks, instead of curly braces. Both <strong>tabs and spaces</strong> are supported, but the standard indentation requires standard Python code to <strong>use four spaces</strong>. For example:</p>
+<div class="cell" data-execution_count="2">
+<div class="cell-output cell-output-stdout">
+<pre><code>x is 1</code></pre>
+</div>
+</div>
+<p>If statement, without indentation (will raise an error).</p>
+</section>
+<section id="if-elif-and-else-statement" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="if-elif-and-else-statement"><span class="header-section-number">7.3</span> If elif and else Statement</h2>
+<div class="cell" data-execution_count="3">
+<div class="cell-output cell-output-stdout">
+<pre><code>x is less than zero</code></pre>
+</div>
+</div>
+<div id="fig-if_elif_else_statement" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/if_elif_else_statement.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">if_elif_else_statement</figcaption>
+</figure>
+</div>
+<figcaption class="figure-caption">Figure&nbsp;7.2: <strong>?(caption)</strong></figcaption>
+</figure>
+</div>
+<section id="example" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="example"><span class="header-section-number">7.3.1</span> Example</h3>
+<p>Write a program to print ‘Yes’ when the number entered by the user is greater than or equal to 25.</p>
+<div class="cell" data-execution_count="4">
+<div class="cell-output cell-output-stdout">
+<pre><code>Yes</code></pre>
+</div>
+</div>
+<p>Write a program to check if a number entered by the user is positive or negative or zero and display an appropriate message.</p>
+<div class="cell" data-execution_count="5">
+<div class="cell-output cell-output-stdout">
+<pre><code>Number is -ve</code></pre>
+</div>
+</div>
+<p>we use if elif and else statement <strong><em>if one of the statement is true</em></strong>.</p>
+</section>
+</section>
+<section id="nested-if-statements" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="nested-if-statements"><span class="header-section-number">7.4</span> Nested if statements</h2>
+<p>We can have a <code>if...elif...else</code> statement inside another <code>if...elif...else</code> statement. This is called <strong>nesting</strong> in computer programming.</p>
+<p>Any number of these statements can be nested inside one another. Indentation is the only way to figure out the level of nesting. They can get confusing, so they must be avoided unless necessary.</p>
+<p>Example: Write a program to check if a number entered by the user is positive or negative or zero and display an appropriate message using nested if statement.</p>
+<div class="cell" data-execution_count="6">
+<div class="cell-output cell-output-stdout">
+<pre><code>Number is +ve</code></pre>
+</div>
+</div>
+<section id="note" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="note"><span class="header-section-number">7.4.1</span> Note:</h3>
+<ul>
+<li><p>There can any number of elif statements.</p></li>
+<li><p>last else will be executed if all elif conditions/statements fails.</p></li>
+</ul>
+</section>
+</section>
+<section id="multiple-if-conditions" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="multiple-if-conditions"><span class="header-section-number">7.5</span> Multiple If Conditions</h2>
+<section id="example-1" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="example-1"><span class="header-section-number">7.5.1</span> Example</h3>
+<p>Write a program to print largest number among four numbers entered by the user.</p>
+<div class="cell" data-execution_count="7">
+<div class="cell-output cell-output-stdout">
+<pre><code> The Largest Number is : 4 </code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="exercise" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="exercise"><span class="header-section-number">7.6</span> Exercise</h2>
+<ol type="1">
+<li><p>Write a program to check whether a user entered number is odd or even?</p></li>
+<li><p>Take two numbers from user and print larger.</p></li>
+<li><p>Take three numbers from user, and print the largest.</p></li>
+<li><p>Write a program to check whether a user entered number is odd or even,valid only for first 10 natural numbers.</p></li>
+<li><p>write a program to get the difference b/w a given number and 17, if number is greater than 17, return double the absolute difference.</p></li>
+<li><p>Write a program to calculate the sum of three given numbers, if values are equal then return thrice of their sum.</p></li>
+<li><p>Write a prog. to get a new string from a given string where “Is” has been added to the front. if the given string already begins with “Is” then return the string.</p></li>
+<li><p>If Question mark ‘?’ is missing in above string, then also include the ‘?’ at the end.</p></li>
+<li><p>Write a program to find out whether a given post is talking about “SBP” or not.</p>
+<ol type="1">
+<li>Write a program to find out whether a student is fail or pass? if it require total 40% and at-least 33% in each subject to pass. Assume 3 subjects, input from the user and marks are out of 100.</li>
+</ol></li>
+<li><p>Write a program to detect a spam (OSICO Spam detector), a spam comment is defined as a text containing following keywords:</p>
+<p>“make a lot of money”, “buy now”, “subscribe this”, “click this”. Write a program to detect these spams.</p></li>
+<li><p>Write a program to calculate the grade of an officer from his numeric rating from the following scheme: greater than 4.5 implies A, greater than 3.5 implies B+, greater than 3 implies B and else C.</p></li>
+<li><p>Write a program to find out the type of the variable Var1 = ——-. suppose 1+2j check whether it is int, float, str, bool, complex, tuple, dict, list, or unknown.</p></li>
+<li><p>Write a Python program to sum of three given integers. However, if two values are equal sum will be zero.</p></li>
+<li><p>Write a program to calculate the fare of a journey based on the following conditions, fare will be charged Rs. 15/km for first 100km, for next 200km it will be Rs.14/km, for next 200km it will be Rs.12/km and for distance above 500km, it will be charged Rs.11/km.</p></li>
+<li><p>Write a routine to convert weight from Kg to pounds or pounds to kg.</p></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Ch06.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Python Dictionaries and Sets</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Ch08.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Loops</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Python for Non-Programmers was written by Ahmad Nadeem.</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+
+</body></html>

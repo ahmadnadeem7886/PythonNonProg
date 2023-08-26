@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Python for Non-Programmers - 4&nbsp; Strings</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Ch05.html" rel="next">
+<link href="./Ch03.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Ch04.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Strings</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Python for Non-Programmers</a> 
+        <div class="sidebar-tools-main">
+    <a href="./Python-for-Non-Programmers.pdf" rel="" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Modules, PIP and Comments</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Variables and Data Types</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch04.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Strings</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lists and Tuples</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Python Dictionaries and Sets</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conditional Expressions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Loops</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">List Comprehensions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ch10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Functions and Recursion</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#string-indexing" id="toc-string-indexing" class="nav-link active" data-scroll-target="#string-indexing"><span class="header-section-number">4.1</span> String Indexing</a>
+  <ul class="collapse">
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">4.1.1</span> Example</a></li>
+  </ul></li>
+  <li><a href="#slicing-strings" id="toc-slicing-strings" class="nav-link" data-scroll-target="#slicing-strings"><span class="header-section-number">4.2</span> Slicing Strings</a></li>
+  <li><a href="#syntax-start-stop-step" id="toc-syntax-start-stop-step" class="nav-link" data-scroll-target="#syntax-start-stop-step"><span class="header-section-number">4.3</span> Syntax : [Start : Stop : Step]</a></li>
+  <li><a href="#scenarios" id="toc-scenarios" class="nav-link" data-scroll-target="#scenarios"><span class="header-section-number">4.4</span> Scenarios</a>
+  <ul class="collapse">
+  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1"><span class="header-section-number">4.4.1</span> Example</a></li>
+  </ul></li>
+  <li><a href="#concatenating-the-strings" id="toc-concatenating-the-strings" class="nav-link" data-scroll-target="#concatenating-the-strings"><span class="header-section-number">4.5</span> Concatenating the Strings</a></li>
+  <li><a href="#string-functions" id="toc-string-functions" class="nav-link" data-scroll-target="#string-functions"><span class="header-section-number">4.6</span> String Functions</a></li>
+  <li><a href="#escape-sequence-characters" id="toc-escape-sequence-characters" class="nav-link" data-scroll-target="#escape-sequence-characters"><span class="header-section-number">4.7</span> Escape Sequence Characters</a></li>
+  <li><a href="#formatted-string-literal-or-f-string" id="toc-formatted-string-literal-or-f-string" class="nav-link" data-scroll-target="#formatted-string-literal-or-f-string"><span class="header-section-number">4.8</span> Formatted String Literal or f-string</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise"><span class="header-section-number">4.9</span> Exercise</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Strings</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>A string is a sequence of characters. Strings are amongst the most popular types in Python. We can create them simply by enclosing characters in quotes. Python treats single quotes the same as double quotes. Creating strings is as simple as assigning a value to a variable. For example −</p>
+<pre><code>var1 = 'Hello World!'
+var2 = "Python Programming"
+var3 = '''Python Programming
+          for begginners'''</code></pre>
+<section id="string-indexing" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="string-indexing"><span class="header-section-number">4.1</span> String Indexing</h2>
+<p>Individual characters of a string can be accessed directly using a numeric index.</p>
+<ul>
+<li><p>String indexing in python is zero-based.</p>
+<ul>
+<li><p>The first character in the string has index 0.</p></li>
+<li><p>The next has index 1 . . . and so on.</p></li>
+<li><p>The index of the last character will be length of the string minus 1.</p></li>
+</ul></li>
+</ul>
+<section id="example" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="example"><span class="header-section-number">4.1.1</span> Example</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>String</th>
+<th>a</th>
+<th>h</th>
+<th>m</th>
+<th>a</th>
+<th>d</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Index</strong></td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td><strong>Negative Index</strong></td>
+<td>-5</td>
+<td>-4</td>
+<td>-3</td>
+<td>-2</td>
+<td>-1</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="slicing-strings" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="slicing-strings"><span class="header-section-number">4.2</span> Slicing Strings</h2>
+<p>You can return a range of characters by using the slice syntax. Specify the start index and the end index, separated by a colon in [ ], to return a part of the string. i.e.&nbsp;we can get a part of the string using slicing.</p>
+</section>
+<section id="syntax-start-stop-step" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="syntax-start-stop-step"><span class="header-section-number">4.3</span> Syntax : [Start : Stop : Step]</h2>
+<ul>
+<li><p><strong>Start</strong>: First Index of the sub-string you want to extract.</p></li>
+<li><p><strong>Stop</strong>: Last Index of the sub-string you want to extract.</p></li>
+<li><p><strong>Step</strong>: The size of the jump you want to take while extracting the subsection.</p></li>
+</ul>
+</section>
+<section id="scenarios" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="scenarios"><span class="header-section-number">4.4</span> Scenarios</h2>
+<p><code>Scenario 1: No step size</code> <code>Scenario 2: No stop index</code> <code>Scenario 3: No start index</code></p>
+<p><code>Scenario 4: No start and stop index</code> <code>Scenario 5: No strat, step or stop index</code></p>
+<p><code>Scenario 6: Single charachter as a string</code></p>
+<section id="example-1" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="example-1"><span class="header-section-number">4.4.1</span> Example</h3>
+<div class="cell" data-execution_count="1">
+<div class="cell-output cell-output-stdout">
+<pre><code>come
+Python
+Welcome
+Wloet h ol fPto
+Welcome to the World of Python
+W</code></pre>
+</div>
+</div>
+<p>Omitting both indices returns the original string, in its entirety. Literally. It’s not a copy, it’s a reference to the original string:</p>
+<div class="cell" data-execution_count="2">
+<div class="cell-output cell-output-stdout">
+<pre><code>1972550391472
+1972550391472</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="concatenating-the-strings" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="concatenating-the-strings"><span class="header-section-number">4.5</span> Concatenating the Strings</h2>
+<p>String concatenation means add strings together. Use the + character to add a variable to another variable:</p>
+<div class="cell" data-execution_count="3">
+<div class="cell-output cell-output-stdout">
+<pre><code>Python Eats???</code></pre>
+</div>
+</div>
+</section>
+<section id="string-functions" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="string-functions"><span class="header-section-number">4.6</span> String Functions</h2>
+<table class="table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 77%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Function</strong></th>
+<th style="text-align: left;"><strong>Explanation</strong></th>
+<th style="text-align: left;"><strong>Syntax</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">capitalize()</td>
+<td style="text-align: left;">The capitalize() method converts first character of a string to uppercase letter and lowercases all other characters, if any</td>
+<td style="text-align: left;"><pre><code>string.capitalize()</code></pre></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">upper()</td>
+<td style="text-align: left;">The <code>upper()</code> method converts all lowercase characters in a string into uppercase characters</td>
+<td style="text-align: left;"><code>string.upper()</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lower()</td>
+<td style="text-align: left;">The <code>lower()</code> method converts all uppercase characters in a string into lowercase characters</td>
+<td style="text-align: left;"><code>string.lower()</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">swapcase()</td>
+<td style="text-align: left;">The <code>swapcase</code> method converts lower to uppar and upper to lower</td>
+<td style="text-align: left;"><code>string.swapcase</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">count()</td>
+<td style="text-align: left;">The <code>count()</code> method returns the number of occurrences of a <strong>substring</strong> in the given string</td>
+<td style="text-align: left;"><code>string.count()</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">endswith()</td>
+<td style="text-align: left;"><strong>T</strong>he <code>endswith()</code> method returns <code>True</code> if a string ends with the specified suffix. If not, it returns <code>False</code></td>
+<td style="text-align: left;"><code>string.endswith()</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">find()</td>
+<td style="text-align: left;">The <code>find()</code> method returns the index of <em>first occurrence</em> of the <strong>substring</strong> (if found). If not found, it returns -1</td>
+<td style="text-align: left;"><code>string.find()</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">len()</td>
+<td style="text-align: left;">The <code>len()</code> method returns the length of a string</td>
+<td style="text-align: left;"><code>string.len()</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">index()</td>
+<td style="text-align: left;">The <code>index()</code> method returns the index of <em>first occurrence</em> of the <strong>substring</strong> (if found). If not found, it returns substring not found</td>
+<td style="text-align: left;"><code>string.index()</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">replace()</td>
+<td style="text-align: left;">The <code>replace()</code> method replaces each matching occurrence of the old character/text in the string with the new character/text</td>
+<td style="text-align: left;"><code>string.replace()</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">strip()</td>
+<td style="text-align: left;">Removes <strong>leading and trailing characters</strong> from a string.</td>
+<td style="text-align: left;"><code>string.strip()</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lstrip()</td>
+<td style="text-align: left;">Removes <strong>leading characters</strong> from a string.</td>
+<td style="text-align: left;"><code>string.lstrip()</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">rstrip()</td>
+<td style="text-align: left;">Removes <strong>trailing characters</strong> from a string.</td>
+<td style="text-align: left;"><code>string.rstrip()</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">join()</td>
+<td style="text-align: left;">Joins elements of an <strong>iterable</strong> into a <strong>single string</strong>.</td>
+<td style="text-align: left;"><code>string.join()</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">split</td>
+<td style="text-align: left;"><strong>Splits</strong> a string into a list of <strong>substrings</strong> based on separator</td>
+<td style="text-align: left;"><code>string.split()</code></td>
+</tr>
+</tbody>
+</table>
+<div class="cell" data-execution_count="4">
+<div class="cell-output cell-output-stdout">
+<pre><code>    PYTHON IS EASY   
+False
+9
+    Jython is Easy   
+Python is Easy
+Ahmad:Nadeem
+['Ahmad', 'Nadeem']</code></pre>
+</div>
+</div>
+</section>
+<section id="escape-sequence-characters" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="escape-sequence-characters"><span class="header-section-number">4.7</span> Escape Sequence Characters</h2>
+<p>In Python, escape sequences are indicated by a backslash ( \ ).</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Syntax</strong></th>
+<th style="text-align: left;"><strong>Explanation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">\n</td>
+<td style="text-align: left;">The most important one may be <code>\n</code> which indicates a new line. Like so, multiple logical lines can be stacked into a single physical line.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">\’</td>
+<td style="text-align: left;">Another escape sequence worth mentioning is <code>\'</code> for a single quote within a <a href="https://www.spss-tutorials.com/spss-string-variables-basics/">string</a>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">\\</td>
+<td style="text-align: left;">A backslash also escapes itself so if it’s really a backslash you want, double it as in <code>\\</code>.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">\t</td>
+<td style="text-align: left;">insert a tab in a string</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="formatted-string-literal-or-f-string" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="formatted-string-literal-or-f-string"><span class="header-section-number">4.8</span> Formatted String Literal or f-string</h2>
+<div class="cell" data-execution_count="5">
+<div class="cell-output cell-output-stdout">
+<pre><code>The product of 5 and 10 is 50
+The product of 5 and 10 is 50</code></pre>
+</div>
+</div>
+</section>
+<section id="exercise" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="exercise"><span class="header-section-number">4.9</span> Exercise</h2>
+<ol type="1">
+<li><p>Convert the String <code>"welcome to the beautiful world of python"</code> to <code>"Welcome To The Beautiful World Of Python"</code></p></li>
+<li><p>Find the output of the following:</p>
+<pre><code>str1 = "PYnative"
+print(str1[1:4], str1[:5], str1[4:], str1[0:-1], str1[:-1])</code></pre></li>
+<li><p>Guess the output of the following:</p></li>
+<li><p>if a=‘1’ and b=‘2’ what will be the value of c=a+b?</p></li>
+<li><p>Consider the variable <strong>g</strong>, and find the first index of the sub-string <strong>snow</strong>:</p>
+<p>g = “Mary had a little lamb Little lamb, little lamb Mary had a little lamb \ Its fleece was white as snow And everywhere that Mary went Mary went, Mary went \ Everywhere that Mary went The lamb was sure to go”</p></li>
+<li><p>In the above variable <strong>g</strong>, replace the sub-string <strong>Mary</strong> with <strong>Bob</strong>:</p></li>
+<li><p>What is the result of following?<br>
+“hello Mike”.find(“Mike”)</p></li>
+<li><p>If string=‘Welcome’ then how to get output as WelcomeWelcomeWelcome?</p></li>
+<li><p>Ask the name and favorite fruit from two persons using input and return as a single string. like: Ahmad likes Mangoes and Muhammad likes Oranges.</p></li>
+<li><p>Write a program to detect double spaces in a string.</p></li>
+<li><p>Replace the double spaces in above question with a single space.</p></li>
+<li><p>Write a program to format the following letter using escape sequence characters.</p>
+<p>letter = ” Dear Participants, This Python course is nice. Thanks!”</p></li>
+<li><p>Find the length of the word NIBAF.</p></li>
+<li><p>Print the reversed str = ‘NIBAF’</p></li>
+<li><p>Attempt to index beyond the end of the string results and checkout the result. like ,‘Ahmad[6]’</p></li>
+<li><p>Select the every third letter from the str = ‘I am learning python’</p></li>
+<li><p>How to check the given word, sentence or a number is palindrome!</p>
+<p>A word, verse, or sentence (such as ‘Able was I ere I saw Elba’) or a number (such as 1881) that reads the same backward or forward is called palindrome.</p></li>
+<li><p>Write a program which accepts the user’s first and last name then print in reverse order.</p></li>
+<li><p>Write a program to accept a filename from user and print the name and extension of that file.</p></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Ch03.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Variables and Data Types</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Ch05.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lists and Tuples</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Python for Non-Programmers was written by Ahmad Nadeem.</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+
+</body></html>

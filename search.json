@@ -1,0 +1,513 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Python for Non-Programmers",
+    "section": "",
+    "text": "Preface"
+  },
+  {
+    "objectID": "Ch01.html#python",
+    "href": "Ch01.html#python",
+    "title": "1  Introduction",
+    "section": "1.1 Python",
+    "text": "1.1 Python\nPython is a widely used general-purpose, high level programming language. It was created by Guido van Rossum in 1991 and further developed by the Python Software Foundation. It was designed with an emphasis on code readability, and its syntax allows programmers to express their concepts in fewer lines of code.\n\n\n\n\n\nGuido van Rossum\n\n\nFigure 1.1: ?(caption)\n\n\n\nIt is an interpreted, interactive, object-oriented programming language. It incorporates modules, exceptions, dynamic typing, very high level dynamic data types, and classes.\nIt’s easy and simple to understand language which feels like reading simple English. This pseudo code nature of Python makes it easy to learn and understand for beginners. Python is a programming language that lets you work quickly and integrate systems more efficiently."
+  },
+  {
+    "objectID": "Ch01.html#features-of-python",
+    "href": "Ch01.html#features-of-python",
+    "title": "1  Introduction",
+    "section": "1.2 Features of Python",
+    "text": "1.2 Features of Python\n\n\n\n\n\ndiag\n\n\nFigure 1.2: ?(caption)\n\n\n\n1.2.1 High Level Programming\n\nA high-level language (HLL) is a programming language such as C, FORTRAN, or Pascal that enables a programmer to write programs that are more or less independent of a particular type of computer. Such languages are considered high-level because they are closer to human languages and further from machine languages.\nIn contrast, assembly languages are considered low-level because they are very close to machine languages.\n\n\n\n\n\n\nHLL\n\n\nFigure 1.3: ?(caption)\n\n\n\n\n1.2.2 Interpreted Vs Compiled\n\nEvery program is a set of instructions, whether it’s to add two numbers or send a request over the internet. Compilers and interpreters take human readable code and convert it to computer readable machine code.\nIn a compiled language, the target machine directly translates the program. In an interpreted language, the source code is not directly translated by the target machine. Instead, a different program, aka the interpreter, reads and executes the code.\n\n\n\n1.2.3 Object Oriented Programming\n- There are many **object-oriented** programming languages including **JavaScript, C++, Java, and Python**. These functions are defined within the class and perform some actions helpful to that specific type of object.\n\n\n\n\n\noop\n\n\nFigure 1.4: ?(caption)\n\n\n\n\n1.2.4 Expressive\nExpressive means that it’s easy to write code that’s easy to understand, both for the compiler and for a human reader.\nTwo factors that make for expressiveness:\n\nIntuitively readable constructs\nLack of boilerplate code\n\nExample: Expressive Python Vs less Expressive Java equivalent.\n\n\n\n\n\nPyVJa\n\n\nFigure 1.5: ?(caption)"
+  },
+  {
+    "objectID": "Ch01.html#general-errors-and-debugging",
+    "href": "Ch01.html#general-errors-and-debugging",
+    "title": "1  Introduction",
+    "section": "1.3 General Errors and Debugging",
+    "text": "1.3 General Errors and Debugging\n\nProgramming is a complex process, and because it is done by human beings, it often leads to errors. Programming errors are called bugs and the process of tracking them down and correcting them is called debugging.\nSyntax Errors: Syntax refers to the structure of a program and the rules about that structure.\n\nPython is not so forgiving. If there is a single syntax error anywhere in your program, Python will display an error message and quit, and you will not be able to run your program. During the first few weeks of your programming career, you will probably spend a lot of time tracking down syntax errors. As you gain experience, though, you will make fewer errors and find them faster.\n\nRun-time Errors: Run-time refers to an error that takes place while executing a program.\nAs opposed to the compilation errors that occur during a program compilation, runtime errors occur only during the execution of the program. For example, insufficient memory can often trigger a run-time error. The Code that exploded a rocket\nSemantic Errors: If there is a semantic error in a program, it will run successfully, in the sense that the computer will not generate any error messages, but it will not do the right thing. It will do something else. Specifically, it will do what you told it to do.\n\nThe problem is that the program you wrote is not the program you wanted to write. The meaning of the program (its semantics) is wrong. Identifying semantic errors can be tricky because it requires you to work backward by looking at the output of the program and trying to figure out what it is doing.\n\nExperimental Debugging: One of the most important skills you will acquire is debugging. Although it can be frustrating, debugging is one of the most intellectually rich, challenging, and interesting parts of programming.\nIn some ways, debugging is like detective work. You are confronted with clues, and you have to infer the processes and events that led to the results you see. Its an Iterative Process."
+  },
+  {
+    "objectID": "Ch01.html#installing-python",
+    "href": "Ch01.html#installing-python",
+    "title": "1  Introduction",
+    "section": "1.4 Installing Python",
+    "text": "1.4 Installing Python\nYou may download and install Python from here."
+  },
+  {
+    "objectID": "Ch02.html#modules",
+    "href": "Ch02.html#modules",
+    "title": "2  Modules, PIP and Comments",
+    "section": "2.1 Modules",
+    "text": "2.1 Modules\nModules refers to a file containing Python statements and definitions. A file containing a python code is called a module. We use modules to break down large programs into small manageable and organized file. In other words, a module is a file containing code written by someone else (usually) which can be imported and used in our program.\n\nBuilt in Modules –&gt; Pre installed in Python -&gt; import module_name\n\nSome examples of built in modules are random, bdb, calendar, os etc.\n\nExternal Modules –&gt; Needs to be installed using PIP -&gt; pip install package_name\n\nSome examples of external modules are Pandas, Matplotlib, NumPy etc."
+  },
+  {
+    "objectID": "Ch02.html#preferred-installer-program-pip",
+    "href": "Ch02.html#preferred-installer-program-pip",
+    "title": "2  Modules, PIP and Comments",
+    "section": "2.2 Preferred Installer Program (PIP)",
+    "text": "2.2 Preferred Installer Program (PIP)\nPIP is package manager for python packages. If you have Python version 3.4 or later, PIP is included by default. Whenever we wants to install a package we may write like:\nPIP install package_name"
+  },
+  {
+    "objectID": "Ch02.html#comments",
+    "href": "Ch02.html#comments",
+    "title": "2  Modules, PIP and Comments",
+    "section": "2.3 Comments",
+    "text": "2.3 Comments\nA Python comment is line of text in a program that is not executed by the interpreter. Comments can be used during debugging to identify issues and to explain code.\n\nSingle Line Comments –&gt; You can write using #\nMultiple lines Comments –&gt; you can write using ```comment```\n\n\n2.3.1 Print Function\nThe print() function prints the specified message to the screen. The message can be a string, or any other object. The full syntax of print() is:\nprint(*objects, sep=' ', end='\\n', file=sys.stdout, flush=False)\n\n\n2.3.2 Parameters of Print Function\n\nobjects - object to be printed. * indicates that there may be more than one object\nsep - objects are separated by sep. Default value: ' '\nend - end is printed at last. Default is ‘\\n’ (line feed)\nfile - must be an object with write(string) method. If omitted, sys.stdout will be used which prints objects on the screen.\nflush - If True, the stream is forcibly flushed. Default value: False\n\n\n\n2.3.3 First Python Program\nLet’s write our first python program . Create a file name name.py and write the following code. Execute this (.py file) and you will see the output of your program.\n\n\nHello World!\na= 2\na=====2a=2\n\na=====2"
+  },
+  {
+    "objectID": "Ch02.html#using-python-as-calculator",
+    "href": "Ch02.html#using-python-as-calculator",
+    "title": "2  Modules, PIP and Comments",
+    "section": "2.4 Using Python as Calculator",
+    "text": "2.4 Using Python as Calculator\nWe can use Python as a calculator by typing python + enter on the terminal. This will open Read Evaluate Print Loop (REPL) i.e. &gt;&gt;&gt;."
+  },
+  {
+    "objectID": "Ch02.html#some-arithmetic-operators",
+    "href": "Ch02.html#some-arithmetic-operators",
+    "title": "2  Modules, PIP and Comments",
+    "section": "2.5 Some Arithmetic Operators",
+    "text": "2.5 Some Arithmetic Operators\n\nArithmetic Operators\n\n\nSymbol\nFunctionality\n\n\n\n\n+\nAddition\n\n\n-\nSubtraction\n\n\n*\nMultiplication\n\n\n/\nDivision\n\n\n%\nModulo (yields remainder after division)\n\n\n//\nInteger Division (truncates towards zero)\n\n\n**\nExponentiation\n\n\n\n\n2.5.1 Python Code with Output\n\n\n625"
+  },
+  {
+    "objectID": "Ch02.html#assignment-operators",
+    "href": "Ch02.html#assignment-operators",
+    "title": "2  Modules, PIP and Comments",
+    "section": "2.6 Assignment Operators",
+    "text": "2.6 Assignment Operators\nAssignment operators are used in Python to assign values to variables.\n\n\n\nOperator\nExample\nEquivalent\n\n\n\n\n=\nx=2\nx=2\n\n\n+=\nx+=2\nx=x+2\n\n\n-=\nx-=2\nx=x-2\n\n\n*=\nx*=2\nx=x*2\n\n\n/=\nx/=2\nx=x/2\n\n\n%=\nx%=2\nx=x%2\n\n\n//=\nx//=2\nx=x//2\n\n\n**=\nx**=2\nx=x**2\n\n\n\n\n2.6.1 Example\nAssignment can be done on more than one variable “simultaneously” on the same line like this:\n\n\n1 2\n10\n7\n1\n\n\nMixing operators between numbers and strings is not supported.\n\n\n3\n\n\nTypeError: unsupported operand type(s) for +: 'int' and 'str'"
+  },
+  {
+    "objectID": "Ch02.html#conditions-comparison-operator",
+    "href": "Ch02.html#conditions-comparison-operator",
+    "title": "2  Modules, PIP and Comments",
+    "section": "2.7 Conditions / Comparison Operator",
+    "text": "2.7 Conditions / Comparison Operator\nPython uses boolean logic to evaluate conditions. The boolean values True and False are returned when an expression is compared or evaluated.\n\n\n\n\n\n\n\n\nOperator\nDescription\nExample\n\n\n\n\n==\nIf the values of two operands are equal, then the condition becomes true.\n(a == b) is not true.\n\n\n!=\nIf values of two operands are not equal, then condition becomes true.\n(a != b) is true.\n\n\n&lt;&gt;\nIf values of two operands are not equal, then condition becomes true.\n(a &lt;&gt; b) is true. This is similar to != operator.\n\n\n&gt;\nIf the value of left operand is greater than the value of right operand, then condition becomes true.\n(a &gt; b) is not true.\n\n\n&lt;\nIf the value of left operand is less than the value of right operand, then condition becomes true.\n(a &lt; b) is true.\n\n\n&gt;=\nIf the value of left operand is greater than or equal to the value of right operand, then condition becomes true.\n(a &gt;= b) is not true.\n\n\n&lt;=\nIf the value of left operand is less than or equal to the value of right operand, then condition becomes true.\n(a &lt;= b) is true.\n\n\n\n\n2.7.1 Example\n\n\nTrue\nFalse\nTrue\nFalse\nTrue\n\n\nNotice that variable assignment is done using a single equals operator “=”, whereas comparison between two variables is done using the double equals operator “==”."
+  },
+  {
+    "objectID": "Ch02.html#logical-operators",
+    "href": "Ch02.html#logical-operators",
+    "title": "2  Modules, PIP and Comments",
+    "section": "2.8 Logical Operators",
+    "text": "2.8 Logical Operators\n\n\n\n\n\n\n\n\nOperator\nDescription\nExample/Syntax\n\n\n\n\nand\nLogical AND: True if both the operands are true\nx and y\n\n\nor\nLogical OR: True if either of the operands is true\nx or y\n\n\nnot\nLogical NOT: True if operand is false\nnot x\n\n\n\n\n2.8.1 Example\n\n\nTHe value if Bool1 and Bool2 is:  False\nTHe value if Bool1 or Bool2 is:  True\nTHe value if not Bool1 is:  False\nTHe value if not Bool2 is:  True"
+  },
+  {
+    "objectID": "Ch02.html#the-in-operator",
+    "href": "Ch02.html#the-in-operator",
+    "title": "2  Modules, PIP and Comments",
+    "section": "2.9 The “in” Operator",
+    "text": "2.9 The “in” Operator\nThe “in” operator could be used to check if a specific object exists within an iterable object container, such as list:\n\n\nTrue"
+  },
+  {
+    "objectID": "Ch02.html#input-function",
+    "href": "Ch02.html#input-function",
+    "title": "2  Modules, PIP and Comments",
+    "section": "2.10 Input Function",
+    "text": "2.10 Input Function\nIn Python, we use input() function to take input from the user. Whatever you enter as input, the input function converts it into a string. If you enter an integer value still input() function convert it into a string.\na = input(\" Please enter your name: \")\nprint(a) # Try yourself"
+  },
+  {
+    "objectID": "Ch02.html#glossary",
+    "href": "Ch02.html#glossary",
+    "title": "2  Modules, PIP and Comments",
+    "section": "2.11 Glossary",
+    "text": "2.11 Glossary\n\nalgorithm\n\nA set of specific steps for solving a category of problems.\n\nbug\n\nAn error in a program.\n\ncomment\n\nInformation in a program that is meant for other programmers (or anyone reading the source code) and has no effect on the execution of the program.\n\ndebugging\n\nThe process of finding and removing any of the three kinds of programming errors.\n\nexception\n\nAnother name for a runtime error.\n\nformal language\n\nAny one of the languages that people have designed for specific purposes, such as representing mathematical ideas or computer programs; all programming languages are formal languages.\n\nhigh-level language\n\nA programming language like Python that is designed to be easy for humans to read and write.\n\nimmediate mode\n\nA style of using Python where we type expressions at the command prompt, and the results are shown immediately. Contrast with script, and see the entry under Python shell.\n\ninterpreter\n\nThe engine that executes your Python scripts or expressions.\n\nlow-level language\n\nA programming language that is designed to be easy for a computer to execute; also called machine language or assembly language.\n\nnatural language\n\nAny one of the languages that people speak that evolved naturally.\n\nobject code\n\nThe output of the compiler after it translates the program.\n\nparse\n\nTo examine a program and analyze the syntactic structure.\n\nportability\n\nA property of a program that can run on more than one kind of computer.\n\nprint function\n\nA function used in a program or script that causes the Python interpreter to display a value on its output device.\n\nproblem solving\n\nThe process of formulating a problem, finding a solution, and expressing the solution.\n\nprogram\n\na sequence of instructions that specifies to a computer actions and computations to be performed.\n\nPython shell\n\nAn interactive user interface to the Python interpreter. The user of a Python shell types commands at the prompt (&gt;&gt;&gt;), and presses the return key to send these commands immediately to the interpreter for processing. The word shell comes from Unix. In the PyScripter used in this RLE version of the book, the Interpreter Window is where we’d do the immediate mode interaction.\n\nruntime error\n\nAn error that does not occur until the program has started to execute but that prevents the program from continuing.\n\nscript\n\nA program stored in a file (usually one that will be interpreted).\n\nsemantic error\n\nAn error in a program that makes it do something other than what the programmer intended.\n\nsemantics\n\nThe meaning of a program.\n\nsource code\n\nA program in a high-level language before being compiled.\n\nsyntax\n\nThe structure of a program.\n\nsyntax error\n\nAn error in a program that makes it impossible to parse — and therefore impossible to interpret.\n\ntoken\n\nOne of the basic elements of the syntactic structure of a program, analogous to a word in a natural language."
+  },
+  {
+    "objectID": "Ch02.html#exercise",
+    "href": "Ch02.html#exercise",
+    "title": "2  Modules, PIP and Comments",
+    "section": "2.12 Exercise",
+    "text": "2.12 Exercise\n\nWrite a program to print a multiple lines string in Python.\nUsing the Python interpreter, type 1 + 2 and then hit return. Python evaluates this expression, displays the result, and then shows another prompt. * is the multiplication operator, and ** is the exponentiation operator. Experiment by entering different expressions and recording what is displayed by the Python interpreter.\nType 1 2 and then hit return. Python tries to evaluate the expression, but it can’t because the expression is not syntactically legal. Instead, it shows the error message:\n{python, error=TRUE, include=TRUE}    #print(1 2)\nIn many cases, Python indicates where the syntax error occurred, but it is not always right, and it doesn’t give you much information about what is wrong. So, for the most part, the burden is on you to learn the syntax rules.\nIn this case, Python is complaining because there is no operator between the numbers.\nWrite a program to display a user entered word “Easy” followed by “Python is very” using input() function.\nType cheese without the quotation marks. This is a run-time error; specifically, it is a NameError, and even more specifically, it is an error because the name cheese is not defined.\nInstall an External Module named pandas.\nWrite a program to print the contents of a directory using os module. Hint: Search online for the function which does so i.e how do i list all files of a directory.\nPerform some arithmetic using REPL.\nUse comparison operators to find out whether a given variable ‘a’ is greater than ‘b’ or not. consider a=45 and b=35.\nWrite a program to find out average of two numbers entered by the user.\nWrite a program which accepts the radius of a circle from the user and compute the area.\nHow to find the reminder of a given number?"
+  },
+  {
+    "objectID": "Ch03.html#variable",
+    "href": "Ch03.html#variable",
+    "title": "3  Variables and Data Types",
+    "section": "3.1 Variable",
+    "text": "3.1 Variable\nA Python variable is a reserved memory location to store values. In other words, a variable in a python program gives data to the computer for processing.\n\n\n\n\n\n\n\nWords\nExplanation\n\n\n\n\nVariable\nContainer to store a value\n\n\nKeywords (can’t be used a variable name)\nReserved Words in Python\n\n\nIdentifiers\nClass/Function/Variable Name\n\n\n\n\n3.1.1 Keywords\n\n\n\nHere is a list of the Python keywords.  Enter any keyword to get more help.\n\nFalse               class               from                or\nNone                continue            global              pass\nTrue                def                 if                  raise\nand                 del                 import              return\nas                  elif                in                  try\nassert              else                is                  while\nasync               except              lambda              with\nawait               finally             nonlocal            yield\nbreak               for                 not"
+  },
+  {
+    "objectID": "Ch03.html#variable-types-in-python",
+    "href": "Ch03.html#variable-types-in-python",
+    "title": "3  Variables and Data Types",
+    "section": "3.2 Variable Types in Python",
+    "text": "3.2 Variable Types in Python\nEvery value in Python has a datatype. Different data types in Python are Integers, Floating point numbers, Strings, Boolean, List, Tuple, Dictionary, etc. Variables in Python can be declared by any name or even alphabets like a, aa, abc, etc.\n\nA variable name can contain alphabets, digits and underscores\nA variable name can start with alphabets or an underscore\nVariable name is case sensitive\nA variable name can’t start with a number/digit\nSpaces are not allowed in variable name\n\n\n3.2.1 How to Declare and Use a Variable\nLet see an example. We will define variable in Python and declare it as “a” and print it.\n\n\n10\n5 6\n30 30 30\n\n\n\n\n3.2.2 How to know the Type of a Variable\nPython is completely object oriented, and not “statically typed”. You do not need to declare variables before using them, or declare their type, i.e. python automatically identify the type. Every variable in Python is an object.\nHere are few basic types of variables. type() function is used to find out the type of a variable.\n\n\n&lt;class 'int'&gt;\n&lt;class 'float'&gt;\n&lt;class 'str'&gt;\n&lt;class 'bool'&gt;\n&lt;class 'NoneType'&gt;\n\n\n\n\n3.2.3 Re-declare a Variable\nYou can re-declare Python variables even after you have declared once.\n\n\nState Bank of Pakistan\n\n\n\n\nTypeError: can only concatenate str (not \"int\") to str\n\n\n\n\n3.2.4 Type Casting\nType Casting is a process in which we convert a literal of one type to another. built-in functions int(), float() and str() shall be used for typecasting.\n\nint() can take a float or string literal as argument and returns a value of class 'int' type.\nfloat() can take an int or string literal as argument and returns a value of class 'float' type.\nstr() can take a float or int literal as argument and returns a value of class 'str' type.\n\n\n\n3.2.5 Type Casting int to float and string\n\n\n&lt;class 'int'&gt;\n&lt;class 'float'&gt;\n&lt;class 'str'&gt;\n\n\n\n\n3.2.6 Type Casting float to int and string\n\n\n&lt;class 'float'&gt;\n&lt;class 'int'&gt;\n&lt;class 'str'&gt;"
+  },
+  {
+    "objectID": "Ch03.html#exercise",
+    "href": "Ch03.html#exercise",
+    "title": "3  Variables and Data Types",
+    "section": "3.3 Exercise",
+    "text": "3.3 Exercise\n\nGuess the type of 6/2, 6//2 and check the results.\nWhat is the value of x after the following is run:\n\nx=4\n\nx=x/2\nCreate a variable named carname and assign the value toyota to it.\nAssign: 3 to variable glass_of_water and printout the message “I drank 3 glasses of water today” by using variable name.\nLet’s try to see what happens after assigning a new value to our variable. Note that program gets executed line by line.\nglass_of_water=3\nglass_of_water=glass_of_water + 1\nprint()\nCheck the type of the variable define above.\nType Cast the above variable first into float and then to string.\nDefine a variable a =3 and A=‘NIBAF’. Will ‘A’ overwrite ‘a’?\nCheck the type of a variable assigned using input() function.\nCalculate square of the number entered by the user.\nWrite a program to accept two numbers from the user and calculate multiplication.\nDisplay string “My”, ‘Name’, “Is”, “Python” as “My**Name**Is**Python” Hint: Default separator in print function is space i.e. ” “.\nWrite a program to take three names as input from a user in the single input() function call.\nDefine a complex variable. 😎"
+  },
+  {
+    "objectID": "Ch04.html#string-indexing",
+    "href": "Ch04.html#string-indexing",
+    "title": "4  Strings",
+    "section": "4.1 String Indexing",
+    "text": "4.1 String Indexing\nIndividual characters of a string can be accessed directly using a numeric index.\n\nString indexing in python is zero-based.\n\nThe first character in the string has index 0.\nThe next has index 1 . . . and so on.\nThe index of the last character will be length of the string minus 1.\n\n\n\n4.1.1 Example\n\n\n\nString\na\nh\nm\na\nd\n\n\n\n\nIndex\n0\n1\n2\n3\n4\n\n\nNegative Index\n-5\n-4\n-3\n-2\n-1"
+  },
+  {
+    "objectID": "Ch04.html#slicing-strings",
+    "href": "Ch04.html#slicing-strings",
+    "title": "4  Strings",
+    "section": "4.2 Slicing Strings",
+    "text": "4.2 Slicing Strings\nYou can return a range of characters by using the slice syntax. Specify the start index and the end index, separated by a colon in [ ], to return a part of the string. i.e. we can get a part of the string using slicing."
+  },
+  {
+    "objectID": "Ch04.html#syntax-start-stop-step",
+    "href": "Ch04.html#syntax-start-stop-step",
+    "title": "4  Strings",
+    "section": "4.3 Syntax : [Start : Stop : Step]",
+    "text": "4.3 Syntax : [Start : Stop : Step]\n\nStart: First Index of the sub-string you want to extract.\nStop: Last Index of the sub-string you want to extract.\nStep: The size of the jump you want to take while extracting the subsection."
+  },
+  {
+    "objectID": "Ch04.html#scenarios",
+    "href": "Ch04.html#scenarios",
+    "title": "4  Strings",
+    "section": "4.4 Scenarios",
+    "text": "4.4 Scenarios\nScenario 1: No step size Scenario 2: No stop index Scenario 3: No start index\nScenario 4: No start and stop index Scenario 5: No strat, step or stop index\nScenario 6: Single charachter as a string\n\n4.4.1 Example\n\n\ncome\nPython\nWelcome\nWloet h ol fPto\nWelcome to the World of Python\nW\n\n\nOmitting both indices returns the original string, in its entirety. Literally. It’s not a copy, it’s a reference to the original string:\n\n\n1972550391472\n1972550391472"
+  },
+  {
+    "objectID": "Ch04.html#concatenating-the-strings",
+    "href": "Ch04.html#concatenating-the-strings",
+    "title": "4  Strings",
+    "section": "4.5 Concatenating the Strings",
+    "text": "4.5 Concatenating the Strings\nString concatenation means add strings together. Use the + character to add a variable to another variable:\n\n\nPython Eats???"
+  },
+  {
+    "objectID": "Ch04.html#string-functions",
+    "href": "Ch04.html#string-functions",
+    "title": "4  Strings",
+    "section": "4.6 String Functions",
+    "text": "4.6 String Functions\n\n\n\n\n\n\n\n\nFunction\nExplanation\nSyntax\n\n\n\n\ncapitalize()\nThe capitalize() method converts first character of a string to uppercase letter and lowercases all other characters, if any\nstring.capitalize()\n\n\nupper()\nThe upper() method converts all lowercase characters in a string into uppercase characters\nstring.upper()\n\n\nlower()\nThe lower() method converts all uppercase characters in a string into lowercase characters\nstring.lower()\n\n\nswapcase()\nThe swapcase method converts lower to uppar and upper to lower\nstring.swapcase\n\n\ncount()\nThe count() method returns the number of occurrences of a substring in the given string\nstring.count()\n\n\nendswith()\nThe endswith() method returns True if a string ends with the specified suffix. If not, it returns False\nstring.endswith()\n\n\nfind()\nThe find() method returns the index of first occurrence of the substring (if found). If not found, it returns -1\nstring.find()\n\n\nlen()\nThe len() method returns the length of a string\nstring.len()\n\n\nindex()\nThe index() method returns the index of first occurrence of the substring (if found). If not found, it returns substring not found\nstring.index()\n\n\nreplace()\nThe replace() method replaces each matching occurrence of the old character/text in the string with the new character/text\nstring.replace()\n\n\nstrip()\nRemoves leading and trailing characters from a string.\nstring.strip()\n\n\nlstrip()\nRemoves leading characters from a string.\nstring.lstrip()\n\n\nrstrip()\nRemoves trailing characters from a string.\nstring.rstrip()\n\n\njoin()\nJoins elements of an iterable into a single string.\nstring.join()\n\n\nsplit\nSplits a string into a list of substrings based on separator\nstring.split()\n\n\n\n\n\n    PYTHON IS EASY   \nFalse\n9\n    Jython is Easy   \nPython is Easy\nAhmad:Nadeem\n['Ahmad', 'Nadeem']"
+  },
+  {
+    "objectID": "Ch04.html#escape-sequence-characters",
+    "href": "Ch04.html#escape-sequence-characters",
+    "title": "4  Strings",
+    "section": "4.7 Escape Sequence Characters",
+    "text": "4.7 Escape Sequence Characters\nIn Python, escape sequences are indicated by a backslash ( \\ ).\n\n\n\nSyntax\nExplanation\n\n\n\n\n\\n\nThe most important one may be \\n which indicates a new line. Like so, multiple logical lines can be stacked into a single physical line.\n\n\n\\’\nAnother escape sequence worth mentioning is \\' for a single quote within a string.\n\n\n\\\\\nA backslash also escapes itself so if it’s really a backslash you want, double it as in \\\\.\n\n\n\\t\ninsert a tab in a string"
+  },
+  {
+    "objectID": "Ch04.html#formatted-string-literal-or-f-string",
+    "href": "Ch04.html#formatted-string-literal-or-f-string",
+    "title": "4  Strings",
+    "section": "4.8 Formatted String Literal or f-string",
+    "text": "4.8 Formatted String Literal or f-string\n\n\nThe product of 5 and 10 is 50\nThe product of 5 and 10 is 50"
+  },
+  {
+    "objectID": "Ch04.html#exercise",
+    "href": "Ch04.html#exercise",
+    "title": "4  Strings",
+    "section": "4.9 Exercise",
+    "text": "4.9 Exercise\n\nConvert the String \"welcome to the beautiful world of python\" to \"Welcome To The Beautiful World Of Python\"\nFind the output of the following:\nstr1 = \"PYnative\"\nprint(str1[1:4], str1[:5], str1[4:], str1[0:-1], str1[:-1])\nGuess the output of the following:\nif a=‘1’ and b=‘2’ what will be the value of c=a+b?\nConsider the variable g, and find the first index of the sub-string snow:\ng = “Mary had a little lamb Little lamb, little lamb Mary had a little lamb \\ Its fleece was white as snow And everywhere that Mary went Mary went, Mary went \\ Everywhere that Mary went The lamb was sure to go”\nIn the above variable g, replace the sub-string Mary with Bob:\nWhat is the result of following?\n“hello Mike”.find(“Mike”)\nIf string=‘Welcome’ then how to get output as WelcomeWelcomeWelcome?\nAsk the name and favorite fruit from two persons using input and return as a single string. like: Ahmad likes Mangoes and Muhammad likes Oranges.\nWrite a program to detect double spaces in a string.\nReplace the double spaces in above question with a single space.\nWrite a program to format the following letter using escape sequence characters.\nletter = ” Dear Participants, This Python course is nice. Thanks!”\nFind the length of the word NIBAF.\nPrint the reversed str = ‘NIBAF’\nAttempt to index beyond the end of the string results and checkout the result. like ,‘Ahmad[6]’\nSelect the every third letter from the str = ‘I am learning python’\nHow to check the given word, sentence or a number is palindrome!\nA word, verse, or sentence (such as ‘Able was I ere I saw Elba’) or a number (such as 1881) that reads the same backward or forward is called palindrome.\nWrite a program which accepts the user’s first and last name then print in reverse order.\nWrite a program to accept a filename from user and print the name and extension of that file."
+  },
+  {
+    "objectID": "Ch05.html#creating-a-lists",
+    "href": "Ch05.html#creating-a-lists",
+    "title": "5  Lists and Tuples",
+    "section": "5.1 Creating a Lists",
+    "text": "5.1 Creating a Lists\n\n\n[1, 2, 3] ['1', '2', '3'] ['123', 8] [7] [1, 2, False, [4, 5]]\n\n\n\n5.1.1 Indexing and Slicing Lists\n\n\n['milk', 14]\n\n\n\n\n5.1.2 Modifying Lists\nUnlike strings, lists are mutable. Its values can be changed.\n\n\n['milk', 'Trucks', 9, 14, False]"
+  },
+  {
+    "objectID": "Ch05.html#sorting-list",
+    "href": "Ch05.html#sorting-list",
+    "title": "5  Lists and Tuples",
+    "section": "5.2 Sorting List",
+    "text": "5.2 Sorting List\nThe list.sort() method sorts the elements of a list in ascending or descending order:\n\n\n[1, 2, 3, 4, 5, 7]\n[7, 5, 4, 3, 2, 1]\n\n\n\n5.2.1 Sorting using a key parameters:\n\n\n['Lahore', 'Karachi', 'Faisalabad', 'Hayderababd']\n['Hayderababd', 'Faisalabad', 'Karachi', 'Lahore']\n\n\n\n\n5.2.2 Removing Elements from the list"
+  },
+  {
+    "objectID": "Ch05.html#converting-a-string-to-a-list",
+    "href": "Ch05.html#converting-a-string-to-a-list",
+    "title": "5  Lists and Tuples",
+    "section": "5.3 Converting a String to a List",
+    "text": "5.3 Converting a String to a List\nString can be convert to a list, as per spaces ” ” or any other special characters “_”, according to the users choice, are encountered. To do this we use the split() method.\n\n5.3.1 Syntax\nstring.split('delimiter')\n\n\n['I', 'like', 'Python']\n['I', 'Like', 'Python']"
+  },
+  {
+    "objectID": "Ch05.html#tuples",
+    "href": "Ch05.html#tuples",
+    "title": "5  Lists and Tuples",
+    "section": "5.4 Tuples",
+    "text": "5.4 Tuples\nTuples are collections of Python objects. They are similar to lists but the difference between them is that tuples are immutable while lists are mutable. Tuples are created by typing a sequence of items, separated by commas. Optionally, you can put the comma-separated values in parenthesis.\n\nTuple1=(1,2,5,6)\nTuple2=(‘a’, “b”, ‘c’, “d”)\nTuple3 = () #empty tuple\nTuple4 = 5,3,1\nTuple5 = (“London”, “Tokyo”, “Korea”, 1986, 1640, 1948)\nNote: To create a single item tuple, you have to use a comma after the value.\n\n\n\n&lt;class 'int'&gt;\n&lt;class 'tuple'&gt;\n2\n\n\nThe values of tuples are stored at different index positions starting from zero. We can access the values by using their index positions inside square brackets. We can index or slice tuples like lists.\n\n\n1\n3\n3\n1"
+  },
+  {
+    "objectID": "Ch05.html#tuple-unpacking",
+    "href": "Ch05.html#tuple-unpacking",
+    "title": "5  Lists and Tuples",
+    "section": "5.5 Tuple Unpacking",
+    "text": "5.5 Tuple Unpacking\nWith a special syntax, Python can unpack the values of a tuple and extract them into single variables.\n\n\n1\n2\n3\n4\n\n\nThe number of variables to the left and right side should be the same and it assigns each variable respectively."
+  },
+  {
+    "objectID": "Ch05.html#lists-vs-tuples",
+    "href": "Ch05.html#lists-vs-tuples",
+    "title": "5  Lists and Tuples",
+    "section": "5.6 Lists Vs Tuples",
+    "text": "5.6 Lists Vs Tuples\n\n5.6.1 Methods Available for List:\n\n\n['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']\n\n\n\n\n5.6.2 Methods Available for Tuple:\n\n\n['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'count', 'index']\n\n\nAs we observe that list have more methods as compare with tuples, but this extra functionality comes at a price i.e. list occupy more memoray than tuple. let’s have a look:\n\n\nHelp on built-in function getsizeof in module sys:\n\ngetsizeof(...)\n    getsizeof(object [, default]) -&gt; int\n    \n    Return the size of object in bytes.\n\nNone\nThe Size of the List  is 120 bytes\nThe Size of the Tuple is 96 bytes\n\n\nwhen working with big data, this can be significant.\n\n\n\n\n\n\n\nList\nTuples\n\n\n\n\n\nAdd Data\n\n\nCan’t be changed\n\n\n\n\nRemove Data\n\n\nImmutable\n\n\n\n\nChange Data\n\n\nMade Quickly\n\n\n\n\nlet’s have a look that how tuples are more efficient than lists:\ntime required to create 1000,000 lists and tuples of same size.\n\n\nTime needed to make 1000000 lists: \n\n\n 0.034990400017704815\nTime needed to make 1000000 tuples:  0.0072222000162582844"
+  },
+  {
+    "objectID": "Ch05.html#exercise",
+    "href": "Ch05.html#exercise",
+    "title": "5  Lists and Tuples",
+    "section": "5.7 Exercise",
+    "text": "5.7 Exercise\n\nCreate a list a_list, with the following elements 1, hello, [1,2,3] and True.\nFind the first and last value of the list.\nFind the value stored at index 1 of a_list.\nRetrieve the elements stored at index 1, 2 and 3 of a_list.\nConcatenate the following lists A = [1, 'a'] and B = [2, 1, 'd']\nMake the list of the PIN of 5 officers and sort them in ascending and descending order.\nConsider the following tuple and Find the length of the tuple, genres_tuple genres_tuple = (“pop”, “rock”, “soul”, “hard rock”, “soft rock”, “R&B”, “progressive rock”, “disco”)\nAccess the element, with respect to index 3.\nUse slicing to obtain indexes 3, 4 and 5.\nFind the index of \"disco\".\nGenerate a sorted List from the Tuple C_tuple=(-5, 1, -3).\nCheck that a python tuple can’t be altered.\nFind the sum of list2 = [1,2,3,4].\nWrite a program to count the number of occurrences of 4 in tuple1=(4,1,2,5,7,4,8,4,4)\nReverse a list2 define above (Q.13) using index method.\nMake the list of the words of “I am doing well”\nsort the above created list as per length of the words in reverse order.\nlist1 = [100, 200, 300, 400, 500], output = [500,400,300,200,100]\nlist2 = [10, 20, [300, 400, [5000, 6000], 500], 30, 40], Expected output :\n[10, 20, [300, 400, [5000, 6000, 7000], 500], 30, 40]\nlist1 = [\"a\", \"b\", [\"c\", [\"d\", \"e\", [\"f\", \"g\"], \"k\"], \"l\"], \"m\", \"n\"] # sub list to add sub_list = [\"h\", \"i\", \"j\"] Expected Output:\n[\"a\", \"b\", [\"c\", [\"d\", \"e\", [\"f\", \"g\",\"h\",\"i\",\"j\"], \"k\"], \"l\"], \"m\", \"n\"]\nlist1 = [5, 10, 15, 20, 25, 50, 20] Expected Output: [5, 10, 15, 200, 25, 50, 20]\nlist1 = [5, 20, 15, 200, 25, 50, 220] remove 20 from the list."
+  },
+  {
+    "objectID": "Ch06.html#dictionaries",
+    "href": "Ch06.html#dictionaries",
+    "title": "6  Python Dictionaries and Sets",
+    "section": "6.1 Dictionaries",
+    "text": "6.1 Dictionaries\nLike a real-life dictionary has words and meanings, Python dictionaries have keys and values. Dictionaries in Python are collections that are unordered, indexed and mutable. They hold keys and values.\nThey are in curly brackets. Key-value pairs are separated by commas and keys and values are separated by colons. Keys in dictionaries are unique and immutable. You can search for a value if you know the key. One key cannot have two values.\n\n\n&lt;class 'dict'&gt;\n{'Key': 'Value1', 'SBP': 'State Bank of Pakistab', 'BSC': 'Banking Services Corporation', 'PSPC': 'Pakistan Security Printing Corporation', 'NIBAF': 'National Institute of Banking and Finance', 'Marks': [71, 78, 84]}\n[71, 78, 84]\n{'Key': 'Value1', 'SBP': 'State Bank of Pakistab', 'PSPC': 'Pakistan Security Printing Corporation', 'NIBAF': 'National Institute of Banking and Finance', 'Marks': [71, 78, 84]}\nFalse"
+  },
+  {
+    "objectID": "Ch06.html#nested-dictionaries-and-dictionary-methods",
+    "href": "Ch06.html#nested-dictionaries-and-dictionary-methods",
+    "title": "6  Python Dictionaries and Sets",
+    "section": "6.2 Nested Dictionaries and Dictionary Methods",
+    "text": "6.2 Nested Dictionaries and Dictionary Methods\n\n\nOne\nFour\n{'1': 'i', '2': 'Two', 'Dict1': {'3': 'Three', '4': 'Four'}}\ndict_keys(['1', '2', 'Dict1'])\ndict_values(['i', 'Two', {'3': 'Three', '4': 'Four'}])\ndict_items([('1', 'i'), ('2', 'Two'), ('Dict1', {'3': 'Three', '4': 'Four'})])\n{'1': 'i', '2': 'Two', 'Dict1': {'3': 'Three', '4': 'Four'}, 'Hello': 'World'}\n\n\nKeyError: '9'\n\n\nQuick Quiz: Write a program to ask a phone number in digits and translate them like: 123 One Two Three.\n\n\nSolution! (Click for Solution)\n\n\n\nOne Two Three \n\n\n\nQuick Quiz: Get a message from input method and resturn the same message with translated emoji like “:)” to 😊.\n\n\nI am happy 😊"
+  },
+  {
+    "objectID": "Ch06.html#sets",
+    "href": "Ch06.html#sets",
+    "title": "6  Python Dictionaries and Sets",
+    "section": "6.3 Sets",
+    "text": "6.3 Sets\nSets in Python are a collection of unordered and unindexed Python objects. Sets are mutable, iterable and they do not contain duplicate values. It is similar to the concept of the mathematical set. That is, set is a collection of non-repetitive elements. The elements in a set are declared inside curly braces separated by commas.\n\n\n{1, 2, 3, 4, 5, 6, 8}\n{2, 5}\n\n\nSince the sets are unindexed, we cannot use slicing or indexing on sets, it will give us a TypeError error when using indexing.\n\n6.3.1 Properties of Sets\n\nSets are Unordered\nSets are Unindexed\nThere is no way to change items in a set\nSets can’t contain duplicate values"
+  },
+  {
+    "objectID": "Ch06.html#operations-on-sets",
+    "href": "Ch06.html#operations-on-sets",
+    "title": "6  Python Dictionaries and Sets",
+    "section": "6.4 Operations on Sets",
+    "text": "6.4 Operations on Sets\n\n\n\n\n\n\n\nCol1\nCol2\n\n\n\n\nset.add( n)\nThe add() function in python sets takes the value as an argument which we want to add to our set and adds the element in our set. one element at a time\n\n\nset. remove ( m )\nThe function deletes the specified element from the set and if the element is not present in the set, it does not return any error.\n\n\nset. pop ( )\npop() function doesn’t take any argument and it removes an arbitrary element from the set and also returns the deleted element.\n\n\nset. clear( )\nThe clear() function empties the set. It can also be used for dictionaries.\n\n\nset.update( )\nThe update() function in python sets can be used to add multiple values to the set at once. It takes an iterable like lists, set or tuple as an argument.\n\n\nset.union ({4,5})\nReturn a new set with all item from both sets\n\n\nset.intersection({7,8})\nReturn a set contains common item of both sets\n\n\nset1.difference(set2)\nReturn the Set1 - Set2\n\n\nset1.symmetric_difference(set2)\nreturn the elements those are not common in set1 and set2\n\n\nset1.issubset(set2)\n\n\n\n\n\n\nTypeError: unhashable type: 'list'"
+  },
+  {
+    "objectID": "Ch06.html#exercise",
+    "href": "Ch06.html#exercise",
+    "title": "6  Python Dictionaries and Sets",
+    "section": "6.5 Exercise",
+    "text": "6.5 Exercise\n\nThe Swift, City and Civic have the following prices in thousands 2800, 3500, 6200 respectively. Create a dictionary car_price_dict where the keys are the car name and the price in thousands are the values.\nYou will need this dictionary for the next two questions: Dict= {‘SBP_ACT’: ‘1956’, ‘BCO’:‘1962’}\nIn the Dict, what are the keys?\nIn the Dict, what are the values?\nUse the dictionary find the price of the City.\nFind the names of the cars from the dictionary using the method keys()\nFind the prices of the cars from the dictionary using the method values()\nCreate a dictionary of Urdu words with values as their English translation. Provide user an option to look it up.\nConsider the list A = [1, 2, 2, 1] and set B = set([1, 2, 2, 1]), does sum(A) == sum(B)?\nCreate a new set C that is the union of sets A={1, 2, 3, 4} and B={3, 4, 5, 6}.\nFind out if A is a subset of C.\nWrite a program to add an element in a set.\nWrite a program to add more than one element in a set.\nWrite a program to remove items from a given set.\nWrite a program to create an intersection of set.\nWrite a program to create a union of sets.\nWrite a program to input 5 numbers from the user and display all the unique numbers\nCan we have a set with elements 3 and ‘3’ ?\nWhat is the type of s = { }?\nWhat will be the length of set s:\ns = set(), s.add(1), s.add(1.0), s.add(‘1’)\nCreate a dictionary. Allow 4 users to enter their favorite Fruits as value , ans use their names as keys. Assume names are unique.\nIf names of 2 users are same in above problem, what will happen?\nIf fruit options of 2 users are same in above problem, what will happen?\nCheck if a set is a subset of another set using comparison operator and isubset() operator.\nWrite a Python program to print out a set containing all the colors from color1 which are not present in color2.\ncolor1 = set([\"White\",\"Black\", \"Red\"])\ncolor2 = set([\"Red\", \"Green\"]), Expected Output:{'Black','White'}\nProvide a use case for each of the following Python data structures: tuple, list, and dictionary.  Explain why each use case is appropriate for each data structure as opposed to the others.\nList - A shopping list. The list type is appropriate, since it can be changed.\nTuple - The first 7 prime numbers. A tuple is a suitable structure, because it is a immutable data type.\nDictionary - A list of words and their meanings. Since a dictionary is made up by key-value pairs, the key would be the word and the value would assume it’s meaning.\nSet - A list of registered e-mails in a system. It’s a proper way to store them, for the e-mails must each be unique.\nAsk the phone number from a user, and convert integers into strings like: 1 to one.\nCreat a dictionary of animal names as keys and their pictures as values. Hint: to get picture/emoji’s press window+period(.)\nTake input from user to show the picture of the animal. Also provide to look at the names of the animals in the dictionary.\nIf animal’s picture is not in the dictionary, provide the option to add the name and picture in the dictionary on run time."
+  },
+  {
+    "objectID": "Ch07.html#if-else-statement-syntax",
+    "href": "Ch07.html#if-else-statement-syntax",
+    "title": "7  Conditional Expressions",
+    "section": "7.1 If else Statement Syntax",
+    "text": "7.1 If else Statement Syntax\n\n\nx is 1\n\n\nHere, the program evaluates the test expression and will execute statement(s) only if the test expression is True. If the test expression is False, the statement(s) is not executed.\nIn Python, the body of the if statement is indicated by the indentation. The body starts with an indentation and the first unindented line marks the end.\nRemember: Python interprets non-zero values as True. None and 0 are interpreted as False.\n\n\n\n\n\nif_else\n\n\nFigure 7.1: ?(caption)"
+  },
+  {
+    "objectID": "Ch07.html#indentation",
+    "href": "Ch07.html#indentation",
+    "title": "7  Conditional Expressions",
+    "section": "7.2 Indentation",
+    "text": "7.2 Indentation\nPython uses indentation for blocks, instead of curly braces. Both tabs and spaces are supported, but the standard indentation requires standard Python code to use four spaces. For example:\n\n\nx is 1\n\n\nIf statement, without indentation (will raise an error)."
+  },
+  {
+    "objectID": "Ch07.html#if-elif-and-else-statement",
+    "href": "Ch07.html#if-elif-and-else-statement",
+    "title": "7  Conditional Expressions",
+    "section": "7.3 If elif and else Statement",
+    "text": "7.3 If elif and else Statement\n\n\nx is less than zero\n\n\n\n\n\n\n\nif_elif_else_statement\n\n\nFigure 7.2: ?(caption)\n\n\n\n7.3.1 Example\nWrite a program to print ‘Yes’ when the number entered by the user is greater than or equal to 25.\n\n\nYes\n\n\nWrite a program to check if a number entered by the user is positive or negative or zero and display an appropriate message.\n\n\nNumber is -ve\n\n\nwe use if elif and else statement if one of the statement is true."
+  },
+  {
+    "objectID": "Ch07.html#nested-if-statements",
+    "href": "Ch07.html#nested-if-statements",
+    "title": "7  Conditional Expressions",
+    "section": "7.4 Nested if statements",
+    "text": "7.4 Nested if statements\nWe can have a if...elif...else statement inside another if...elif...else statement. This is called nesting in computer programming.\nAny number of these statements can be nested inside one another. Indentation is the only way to figure out the level of nesting. They can get confusing, so they must be avoided unless necessary.\nExample: Write a program to check if a number entered by the user is positive or negative or zero and display an appropriate message using nested if statement.\n\n\nNumber is +ve\n\n\n\n7.4.1 Note:\n\nThere can any number of elif statements.\nlast else will be executed if all elif conditions/statements fails."
+  },
+  {
+    "objectID": "Ch07.html#multiple-if-conditions",
+    "href": "Ch07.html#multiple-if-conditions",
+    "title": "7  Conditional Expressions",
+    "section": "7.5 Multiple If Conditions",
+    "text": "7.5 Multiple If Conditions\n\n7.5.1 Example\nWrite a program to print largest number among four numbers entered by the user.\n\n\n The Largest Number is : 4"
+  },
+  {
+    "objectID": "Ch07.html#exercise",
+    "href": "Ch07.html#exercise",
+    "title": "7  Conditional Expressions",
+    "section": "7.6 Exercise",
+    "text": "7.6 Exercise\n\nWrite a program to check whether a user entered number is odd or even?\nTake two numbers from user and print larger.\nTake three numbers from user, and print the largest.\nWrite a program to check whether a user entered number is odd or even,valid only for first 10 natural numbers.\nwrite a program to get the difference b/w a given number and 17, if number is greater than 17, return double the absolute difference.\nWrite a program to calculate the sum of three given numbers, if values are equal then return thrice of their sum.\nWrite a prog. to get a new string from a given string where “Is” has been added to the front. if the given string already begins with “Is” then return the string.\nIf Question mark ‘?’ is missing in above string, then also include the ‘?’ at the end.\nWrite a program to find out whether a given post is talking about “SBP” or not.\n\nWrite a program to find out whether a student is fail or pass? if it require total 40% and at-least 33% in each subject to pass. Assume 3 subjects, input from the user and marks are out of 100.\n\nWrite a program to detect a spam (OSICO Spam detector), a spam comment is defined as a text containing following keywords:\n“make a lot of money”, “buy now”, “subscribe this”, “click this”. Write a program to detect these spams.\nWrite a program to calculate the grade of an officer from his numeric rating from the following scheme: greater than 4.5 implies A, greater than 3.5 implies B+, greater than 3 implies B and else C.\nWrite a program to find out the type of the variable Var1 = ——-. suppose 1+2j check whether it is int, float, str, bool, complex, tuple, dict, list, or unknown.\nWrite a Python program to sum of three given integers. However, if two values are equal sum will be zero.\nWrite a program to calculate the fare of a journey based on the following conditions, fare will be charged Rs. 15/km for first 100km, for next 200km it will be Rs.14/km, for next 200km it will be Rs.12/km and for distance above 500km, it will be charged Rs.11/km.\nWrite a routine to convert weight from Kg to pounds or pounds to kg."
+  },
+  {
+    "objectID": "Ch08.html#the-for-loop",
+    "href": "Ch08.html#the-for-loop",
+    "title": "8  Loops",
+    "section": "8.1 The “for” loop",
+    "text": "8.1 The “for” loop\nFor loop iterate over a given sequence (range, list, tuple, string etc.) or other iterable objects. Iterating over a sequence is called traversal. Flow chart of for loop is:\n\n\n\n\n\nfor-loop\n\n\nFigure 8.1: ?(caption)"
+  },
+  {
+    "objectID": "Ch08.html#looping-through-string",
+    "href": "Ch08.html#looping-through-string",
+    "title": "8  Loops",
+    "section": "8.2 Looping through String",
+    "text": "8.2 Looping through String\nEven strings are iterable objects, they contain a sequence of characters:\n\n\ns\nt\nr\ni\nn\ng"
+  },
+  {
+    "objectID": "Ch08.html#looping-through-a-list",
+    "href": "Ch08.html#looping-through-a-list",
+    "title": "8  Loops",
+    "section": "8.3 Looping through a List",
+    "text": "8.3 Looping through a List\n\n\nABL\nMCB\nNBP"
+  },
+  {
+    "objectID": "Ch08.html#how-to-use-index",
+    "href": "Ch08.html#how-to-use-index",
+    "title": "8  Loops",
+    "section": "8.4 How to Use Index",
+    "text": "8.4 How to Use Index\n\n\n0 ABL\n1 MCB\n2 NBP"
+  },
+  {
+    "objectID": "Ch08.html#use-of-enumerate-for-indexing",
+    "href": "Ch08.html#use-of-enumerate-for-indexing",
+    "title": "8  Loops",
+    "section": "8.5 Use of Enumerate for Indexing",
+    "text": "8.5 Use of Enumerate for Indexing\n\n\n0 red\n1 yellow\n2 green\n3 purple\n4 blue\n\n\nWe can change the elements in a list:\n\n\nBefore square  0 is red\nAfter square  0 is white\nBefore square  1 is yellow\nAfter square  1 is white\nBefore square  2 is green\nAfter square  2 is white\nBefore square  3 is purple\nAfter square  3 is white\nBefore square  4 is blue\nAfter square  4 is white\n\n\nQuick Quiz: Print the following pattern using for loop.\n+++\n++\n+++++\n+++\n+++++++++\n\n\n+++\n++\n+++++\n+++\n+++++++++"
+  },
+  {
+    "objectID": "Ch08.html#iterating-over-tuples",
+    "href": "Ch08.html#iterating-over-tuples",
+    "title": "8  Loops",
+    "section": "8.6 Iterating over tuples",
+    "text": "8.6 Iterating over tuples\nWe can use for loops to iterate on a tuple. The for loop will keep on iterating until the elements in the tuples are exhausted.\n\n\nSBP\nNIBAF\nBSC"
+  },
+  {
+    "objectID": "Ch08.html#the-range-function",
+    "href": "Ch08.html#the-range-function",
+    "title": "8  Loops",
+    "section": "8.7 The range ( ) function",
+    "text": "8.7 The range ( ) function\nWhen using for loops in Python, the range() function is pretty useful to specify the number of times the loop is executed. It yields a sequence of numbers within a specified range.\nsyntax: range (start, stop, steps)\n\nThe first argument is the starting value. It is zero by default.\nThe second argument is the ending value of the range.\nThe third argument is the number of steps to take after each yield.\n\n\n\n8.7.1 Iterating over range object\n\n\n2\n5\n8\n\n\n\n\n8.7.2 an other for loop with else\n\n\nS\nB\nP\nloop ended"
+  },
+  {
+    "objectID": "Ch08.html#nested-loop",
+    "href": "Ch08.html#nested-loop",
+    "title": "8  Loops",
+    "section": "8.8 Nested Loop",
+    "text": "8.8 Nested Loop\nA nested loop is a loop inside a loop. The “inner loop” will be executed once for each iteration of the “outer loop” i.e., in each iteration of the outer loop, inner loop execute all its iteration. For each iteration of an outer loop, the inner loop re-start and completes its execution before the outer loop can continue to its next iteration.\n\n\n(Rizwan, JD)\n(Rizwan, OG-4)\n(Rizwan, SBP)\n(Adil, JD)\n(Adil, OG-4)\n(Adil, SBP)\n(Ahmad, JD)\n(Ahmad, OG-4)\n(Ahmad, SBP)\n\n\nQuick Quiz: Create Co-ordinate (0,0) ,(0,1) ,(0,2) , (1,0) ,(1,1) ,(1,2) ,(2,0) ,(2,1) ,(2,2) ,(3,0) ,(3,1) ,(3,2)\n\n\n(0,0)\n(0,1)\n(0,2)\n(1,0)\n(1,1)\n(1,2)\n(2,0)\n(2,1)\n(2,2)\n(3,0)\n(3,1)\n(3,2)"
+  },
+  {
+    "objectID": "Ch08.html#the-while-loop",
+    "href": "Ch08.html#the-while-loop",
+    "title": "8  Loops",
+    "section": "8.9 The “while” loop",
+    "text": "8.9 The “while” loop\nThe while loop in Python executes a block of code until the specified condition becomes False.\nFlow chart of while loop is :\n\n\n\n\n\nwhile Loop Flow chart\n\n\nFigure 8.2: ?(caption)\n\n\n\n\n0\n2\n4\n6\n8\n\n\nIn the example, the while statement checks if count is less than 10.\nInitially, count is zero so the statement is true and it executes the body of while. Then the count gets incremented by 2. Again we check the condition and this goes on till the condition becomes false.\nHere, when our code checks 10&lt;10, the statement returns False and so the code in while block is not executed.\n\n8.9.1 Example\n\n\n1982\n1980\nIt took  2 repetitions to get out of loop."
+  },
+  {
+    "objectID": "Ch08.html#infinite-loop",
+    "href": "Ch08.html#infinite-loop",
+    "title": "8  Loops",
+    "section": "8.10 Infinite loop",
+    "text": "8.10 Infinite loop\nA loop is called an infinite loop when the loop will never reach its end.\nUsually, when a condition is always True in a while loop, the loop will become an infinite loop. So we should be careful when writing conditions and while updating variables used in the loop.\nIn Python shell, we can stop/terminate the program on an infinite loop by using CTRL + C. In jupyter notebook press i twice.\nQuick Quiz: Write a program to print 1 to 50 using a while loop.\nQuick Quiz: Write a program to print the contents of a list=['C', 'C++', 'java', 'fortran','python'] using while loop."
+  },
+  {
+    "objectID": "Ch08.html#loop-control-statements-in-python",
+    "href": "Ch08.html#loop-control-statements-in-python",
+    "title": "8  Loops",
+    "section": "8.11 Loop control statements in Python",
+    "text": "8.11 Loop control statements in Python\n\n\n\n\n\n1\n2\n3\n4\n\n\nIn this loop, we are incrementing the value of num variable and then printing it. When the num value becomes 5 the break statement is executed which terminates the loop and therefore loop is not executed further.\n\n\n1\n2\n3\n4\n6\n7\n8\n9\n10\n\n\nHere, we see that when the num variable is equal to 5, the continue statement is executed. It then doesn’t execute the lines after the continue statement and the control is sent to the next iteration."
+  },
+  {
+    "objectID": "Ch08.html#common-mistakes",
+    "href": "Ch08.html#common-mistakes",
+    "title": "8  Loops",
+    "section": "8.12 Common Mistakes",
+    "text": "8.12 Common Mistakes\n\nMostly people forgte to initialize the variable.\nThere is second issue, we might face if we forget to initialize the variables with the right value. we might have already used the variable in our program. if we reuse a variable without setting the correct value from the start, it will still have the value from before.\n\n\n\n45\n\n\nWhenever you are writing a loop, check that you are initializing all the variables you want to use before you use them.\n\n\n362880"
+  },
+  {
+    "objectID": "Ch08.html#exercise",
+    "href": "Ch08.html#exercise",
+    "title": "8  Loops",
+    "section": "8.13 Exercise",
+    "text": "8.13 Exercise\n\nA list of groceries is given below, print all items with its index.\ngroceries = [\"bananas\",\"butter\",\"cheese\",\"toothpaste\"]\nMake a combination of all the letters of ‘SBP’ and ‘NIBAF’\nWrite a program to say “hello” to all persons in a list which starts with M. List = ['Ahmad', 'Muhammad', 'Essa', 'Mossa']\nPrint odd numbers in first 10 numbers using while loop.\nAlso find the sum of all numbers in above question.\nWrite a program to print the multiplication table of a number entered by the user, using ‘for’ loop.\nAttempt above problem using while loop.\nFind the total of [10,20,30] using for loop.\nWrite a program to guess a secrete number in 3 attempts using while loop.\nSolve above problem while generating secrete number randomly.\nProvide a hint to make problem easy, if guess is larger, then print ‘its larger’, otherwise ‘its smaller’\nWrite a program whether a given number is prime or not.\nFind the prime numbers in a given range.\nstore the numbers obtained in above question as a list.\nFind the sum of all the numbers in the list above in question 14.\nChallenge: calculate the time required to run the above code 500 times.\nDraw the following pattern using nested loop.\nMake the co-ordinates (0,0,0) …(2,2,2) using nested for loop.\nWrite a for loop the prints out all the element between -5 and 5 using the range function.\nWrite a while loop to display the values of the Rating of an album playlist stored in the list PlayListRatings. If the score is less than 6, exit the loop. The list PlayListRatings is given by: PlayListRatings = [10, 9.5, 10, 8, 7.5, 5, 10, 10]\nWrite a program to sum first n natural numbers, take input from user.\nWrite program to find the factorial of a number n.\nWrite a program to print the following pattern.\n\n*\n* *\n* * *\n* * * *\n* * * * *\nWrite a Python program to concatenate all elements in a list into a string and return it\nWrite a nested for loop program to print multiplication table in Python from 2 to 10.\nWrite a Python program to print all even numbers from a given numbers list in the same order and stop the printing if any numbers that come after 237 in the sequence.\nWrite a program to find those numbers which are divisible by 7 and multiple of 5, between 1500 and 2700 (both included) and print the result in the form of a list."
+  },
+  {
+    "objectID": "Ch09.html#example",
+    "href": "Ch09.html#example",
+    "title": "9  List Comprehensions",
+    "section": "9.1 Example",
+    "text": "9.1 Example\nIterating through a string Using for Loop\n\n\n['N', 'I', 'B', 'A', 'F']\n\n\nIterating through a string Using List Comprehension\n\n\n['N', 'I', 'B', 'A', 'F']\n\n\nIf you noticed, ‘NIBAF’ is a string, not a list. This is the power of list comprehension. It can identify when it receives a string or a tuple and work on it like a list."
+  },
+  {
+    "objectID": "Ch09.html#example-1",
+    "href": "Ch09.html#example-1",
+    "title": "9  List Comprehensions",
+    "section": "9.2 Example",
+    "text": "9.2 Example\nBased on a list of fruits, you want a new list, containing only the fruits with the letter “a” in the name.\nWithout list comprehension you will have to write a for statement with a conditional test inside:\n\n\n['apple', 'banana', 'mango']\n\n\nThis can be done in one line of code With list comprehension:\n\n\n['apple', 'banana', 'mango']"
+  },
+  {
+    "objectID": "Ch09.html#the-syntax",
+    "href": "Ch09.html#the-syntax",
+    "title": "9  List Comprehensions",
+    "section": "9.3 The Syntax",
+    "text": "9.3 The Syntax\nnew_list = [expression for item in iterable if condition == True]\nThe return value is a new list, leaving the old list unchanged."
+  },
+  {
+    "objectID": "Ch09.html#key-points-to-remember",
+    "href": "Ch09.html#key-points-to-remember",
+    "title": "9  List Comprehensions",
+    "section": "9.4 Key Points to Remember",
+    "text": "9.4 Key Points to Remember\n\nList comprehension is an elegant way to define and create lists based on existing lists.\nList comprehension is generally more compact and faster than normal functions and loops for creating list.\nHowever, we should avoid writing very long list comprehensions in one line to ensure that code is user-friendly.\nRemember, every list comprehension can be rewritten in for loop, but every for loop can’t be rewritten in the form of list comprehension."
+  },
+  {
+    "objectID": "Ch09.html#exercise",
+    "href": "Ch09.html#exercise",
+    "title": "9  List Comprehensions",
+    "section": "9.5 Exercise",
+    "text": "9.5 Exercise\n\nCreate the list [1,2,3,4,5] using list comprehension.\nUse a list comprehension that iterates over a_list, prints a list composed of each value in a_list multiplied by 10.\na_list = list(range(1, 11))\nUse a list comprehension that iterates over a_list, prints a list composed of odd numbers from 1 to 9.\nUsing a list comprehension which iterates over a_list and whose output expression accesses a value from a dictionary, print a list composed of the text form of each even number from 2 to 10, e.g., [ 'two', 'four', 'six', 'eight', 'ten' ].\na_dictionary = { 1 : 'one', 2 : 'two', 3 : 'three', 4 : 'four', 5 : 'five', 6 : 'six', 7 : 'seven', 8 : 'eight', 9 : 'nine', 10 : 'ten'}\nPrompt the user for a number, which will be returned from input as a string data type. Strings can be iterated over like lists, such that the loop repeats for each character in the string. Using a list comprehension which iterates over the user-entered string and whose output expression accesses values from a_dictionary, print a list of the text form of each digit from the user-entered string, e.g., Enter a number: 195 return [ 'one', 'nine', 'five' ]\nUsing the same user-entered number and list comprehension as above, also print the text form of the digits in a single string (using the string join function) with a dash between each text form of the digit, e.g.,\none-nine-five\nWrite a list comprehension that builds a list containing only the names with at least 4 characters. list9 = ['SBP', 'NIABF', 'HoK', 'PSPC', 'DPC']\nWrite a list comprehension that builds a list containing only even numbers over 40.\nnumbers = list (range (10,50,5))\nAdd % in front and end of every single word in a given string str: “Fall is Awesome in Sakardu” only using list comprehensions. Desired Output\n['%Fall%','%is%','%Awesome%','%in%','%Sakardu%']\nUse list comprehension to make a list of the first letter of each word in the following list:\nwordList = [\"this\", \"is\", \"an\", \"apple\"]\nA string is given:\nmsg = \"Long Live Pakistan!\"\nWrite a list comprehension that prints a list\n['L', 'o', 'n', 'g', 'L', 'i', 'v', 'e', 'P', 'a', 'k', 'i', 's', 't', 'a', 'n']\nDo not print out the space or the !."
+  },
+  {
+    "objectID": "Ch10.html#function",
+    "href": "Ch10.html#function",
+    "title": "10  Functions and Recursion",
+    "section": "10.1 Function",
+    "text": "10.1 Function\nA function is a group of related statements that performs a specific task.\nFunctions help break our program into smaller and modular chunks. As our program grows larger and larger, functions make it more organized and manageable. Furthermore, it avoids repetition and makes the code reusable any number of time.\n\n10.1.1 Syntax\nAbove shown is a function definition that consists of the following components.\n\nKeyword def that marks the start of the function header.\nA function name to uniquely identify the function. Function naming follows the same rules of writing identifiers in Python.\nParameters (arguments) through which we pass values to a function. They are optional.\nA colon (:) to mark the end of the function header.\nOptional documentation string (doc string) to describe what the function does.\nOne or more valid python statements that make up the function body. Statements must have the same indentation level (usually 4 spaces).\nThe statement return exits a function, optionally passing back a value..\n\n\n\n10.1.2 Example\n\n\nWelcome to the World of Python, Raja\n\n\n\n\n10.1.3 Quick Quiz\n\nDefine a function to return the absolute value of the entered number.\nDefine a function to day Hello, good morning “name”, if the person in your contact list, otherwise ask “Who are You”"
+  },
+  {
+    "objectID": "Ch10.html#type-of-functions",
+    "href": "Ch10.html#type-of-functions",
+    "title": "10  Functions and Recursion",
+    "section": "10.2 Type of functions",
+    "text": "10.2 Type of functions\nBasically, we can divide functions into the following two types:\n\nBuilt-in functions - Functions that are built into Python.\nUser-defined functions - Functions defined by the users themselves.\n\nFor example, len( ), range ( ) and print( ) are built-in functions, and the greet function defined above is a user-defined function."
+  },
+  {
+    "objectID": "Ch10.html#functions-with-arguments",
+    "href": "Ch10.html#functions-with-arguments",
+    "title": "10  Functions and Recursion",
+    "section": "10.3 Functions with arguments",
+    "text": "10.3 Functions with arguments\n\n\nHello ahmad, how are you\n\n\nHere, the function greet1() has two parameters.\nSince we have called this function with two arguments, it runs smoothly and we do not get any error.\nIf we call it with a different number of arguments, the interpreter will show an error message. Below is a call to this function with one and no arguments along with their respective error messages.\n\n\nTypeError: greet1() missing 1 required positional argument: 'msg'"
+  },
+  {
+    "objectID": "Ch10.html#default-argument-or-parameter-value",
+    "href": "Ch10.html#default-argument-or-parameter-value",
+    "title": "10  Functions and Recursion",
+    "section": "10.4 Default argument or parameter value",
+    "text": "10.4 Default argument or parameter value\nFunction arguments can have default values in Python. We can provide a default value to an argument by using the assignment operator (=). Here is an example.\n\n\nHello Ahmad, How do you do\n\n\nThe input to a function is called a formal parameter.\nA variable that is declared inside a function is called a local variable. The parameter only exists within the function (i.e. the point where the function starts and stops).\nA variable that is declared outside a function definition is a global variable, and its value is accessible and modifiable throughout the program.\n\n\n5"
+  },
+  {
+    "objectID": "Ch10.html#recursive-function",
+    "href": "Ch10.html#recursive-function",
+    "title": "10  Functions and Recursion",
+    "section": "10.5 Recursive function",
+    "text": "10.5 Recursive function\nRecursion is the process of defining something in terms of itself. That is, a function that calls itself. For example:\nfactorial(n)=n * factorial(n-1)\n\n10.5.1 Example:\n\n\n6\n\n\n\n\n10.5.2 Return Values\nThe Python return statement is a special statement that you can use inside a function or method to send the function’s result back to the caller. To let a function return a value, use the return statement:\nabove example can be wrapped in a function as:\n\n\n6\n\n\nUsing Recursion\n\n\n6"
+  },
+  {
+    "objectID": "Ch10.html#pre-defined-functions",
+    "href": "Ch10.html#pre-defined-functions",
+    "title": "10  Functions and Recursion",
+    "section": "10.6 Pre-defined Functions",
+    "text": "10.6 Pre-defined Functions\nThere are many pre-defined functions in Python, so let’s start with the simple ones.\nThe print() function:\n\n\n[10.0, 8.5, 9.5, 7.0, 7.0, 9.5, 9.0, 9.5]\n\n\nThe sum() function adds all the elements in a list or tuple: try pease\nThe len() function show the length a list or tuple: try please"
+  },
+  {
+    "objectID": "Ch10.html#exceptions",
+    "href": "Ch10.html#exceptions",
+    "title": "10  Functions and Recursion",
+    "section": "10.7 Exceptions",
+    "text": "10.7 Exceptions\nAn exception is an error that occurs during the execution of code. This error causes the code to raise an exception and if not prepared to handle it will halt the execution of the code.\n\n10.7.1 Exampls\nRun each piece of code and observe the exception raised\n\n\nZeroDivisionError: division by zero"
+  },
+  {
+    "objectID": "Ch10.html#exercise_functions",
+    "href": "Ch10.html#exercise_functions",
+    "title": "10  Functions and Recursion",
+    "section": "10.8 Exercise_Functions",
+    "text": "10.8 Exercise_Functions\n\nCreate a function con that add two number .\nCan the con function we defined before be used to concatenate lists or tuples?\nWrite a function named odd_or_zero which takes one parameter, a number, and returns that number if it is odd or returns 0 if the number is even. Then using a list comprehension which iterates over a_list and calls your odd or zero function for each value, print a list like the following: [ 1, 0, 3, 0, 5, 0, 7, 0, 9, 0 ]\nDefine a function to find the greatest of three numbers using.\nHow do you prevent python print( ) function to print a new line at the end.\nWrite a recursive function to calculate the sum of first n natural numbers.\nWrite a function to print first n lines of the following pattern.\n*****\n***\n*\nWrite a function which converts inches in cm\nWrite a function to remove a given word from a string and strip it at the same time.\nWrite a Python function that takes a list and returns a new list with unique elements of the first list. Sample List : [1,2,3,3,3,3,4,5], Unique List :[1, 2, 3, 4, 5]"
+  }
+]
